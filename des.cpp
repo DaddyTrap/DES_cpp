@@ -8,7 +8,7 @@ using std::fstream;
 using std::string;
 
 template <size_t SOURCE_LENGTH, size_t TARGET_LENGTH>
-bitset<TARGET_LENGTH> substitute(bitset<SOURCE_LENGTH> source, unsigned c har sub_matrix[TARGET_LENGTH]) {
+bitset<TARGET_LENGTH> substitute(bitset<SOURCE_LENGTH> source, unsigned char sub_matrix[TARGET_LENGTH]) {
   bitset<TARGET_LENGTH> ret;
   for (int i = 0; i < TARGET_LENGTH; ++i) {
     ret[TARGET_LENGTH - 1 - i] = source[SOURCE_LENGTH - sub_matrix[i]];
